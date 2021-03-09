@@ -1,7 +1,7 @@
 {
   "name": "covid19-data-tracker",
   "version": "1.0.0",
-  "description": "covid19 data tracker project",
+  "description": "COVID19 data tracker project",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,6 +14,14 @@
   ],
   "author": "jrafaaael",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrafaaael/covid19-data-tracker"
+  },
+  "homepage": "https://jrafaaael.github.io/covid19-data-tracker/",
+  "bugs": {
+    "url": "https://github.com/jrafaaael/covid19-data-tracker/issues"
+  },
   "dependencies": {
     "chart.js": "^2.9.4",
     "lottie-web": "^5.7.6",
