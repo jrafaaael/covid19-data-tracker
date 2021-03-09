@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID19 Data Tracker</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/select.css">
+    <link rel="stylesheet" href="./CSS/main_container.css">
+    <link rel="stylesheet" href="./CSS/loading_animation.css">
+    <link rel="stylesheet" href="./CSS/media_queries.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="source-container">
+            <a href="https://github.com/owid/covid-19-data" class="source" target="_blank" title="OWID GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#333" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <polyline points="64 88 16 128 64 168" fill="none" stroke="#333" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16"></polyline>
+                    <polyline points="192 88 240 128 192 168" fill="none" stroke="#333" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16"></polyline>
+                    <line x1="160" y1="40" x2="96" y2="216" fill="none" stroke="#333" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16"></line>
+                </svg>
+            </a>
+            <p class="info">Source</p>
+        </div>
+        <div class="search-container">
+            <form id="search-country">
+                <label for="country" class="select">
+                    <select name="country-list" id="country" required>
+                        <option value="" disabled selected>Select a country</option>
+                    </select>
+                    <svg>
+                        <use xlink:href="#select-arrow-down"></use>
+                    </svg>
+                </label>
+            </form>
+        </div>
+        <div class="dark-mode-container">
+            <button id="toggle">
+                <div id="animation"></div>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <section class="left-sidevar">
+            <article class="country-information">
+                <div class="name-container">
+                    <h2 id="country-name"></h2>
+                    <img src="" alt="" id="country-flag">
+                </div>
+                <div class="last-update-container">
+                    <p class="last-update">Last Update: <span></span></p>
+                </div>
+                <div class="last-update-information">
+                    <h4 id="population">Population: <abbr></abbr></h4>
+                    <h4 class="total-deaths">Deaths: <abbr> <abbr></abbr></abbr></h4>
+                    <h4 class="new-cases">New Cases: <abbr></abbr></h4>
+                    <h4 class="total-cases">Cases: <abbr></abbr></h4>
+                    <h4 class="total-vaccinations">Total Vaccinations: <abbr></abbr></h4>
+                </div>
+            </article>
+            <article class="date-picker">
+                <div class="date-picker-container">
+                    <form id="date-picker-form">
+                        <label for="date">Select a date</label>
+                        <input type="date" name="date" id="date">
+                    </form>
+                </div>
+                <div class="chart-container">
+                    <canvas id="data-per-week"></canvas>
+                </div>
+            </article>
+        </section>
+        <section id="charts-section" class="right-sidevar">
+            <div class="chart-container">
+                <canvas id="vaccinations"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="cases-per-month"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <div class="loading">
+        <div id="loading-animation"></div>
+    </div>
+
+    <!-- SVG sprit -->
+    <svg class="sprites">
+        <symbol id="select-arrow-down" viewbox="0 0 10 6">
+            <polyline points="1 1 5 5 9 1"></polyline>
+        </symbol>
+    </svg>
+
+    <script src="app.js" type="module"></script>
+    <script src="dark_mode.js" type="module"></script>
+    <script src="node_modules\chart.js\dist\Chart.bundle.min.js"></script>
+    <script src="node_modules\lottie-web\build\player\lottie.min.js"></script>
+    <script src="node_modules\moment\moment.js"></script>
+</body>
+
+</html>

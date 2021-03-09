@@ -1,0 +1,45 @@
+.navbar {
+    width: 100%;
+    max-width: 500px;
+    height: 12.5vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar svg {
+    width: 20px !important;
+}
+
+.source-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.source svg polyline,
+.source svg line {
+    stroke: var(--primary-font-color);
+}
+
+.source-container .info {
+    color: var(--primary-font-color);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: normal;
+}
+
+.search-container {
+    margin: 0 1.15rem;
+}
+
+#toggle {
+    cursor: pointer;
+}
+
+#toggle svg g path {
+    fill: var(--primary-font-color);
+    stroke: var(--primary-font-color);
+}

@@ -1,0 +1,26 @@
+body.loading-state {
+    overflow: hidden;
+}
+
+.loading {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#loading-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading svg {
+    width: 100% !important;
+    max-width: 500px;
+}

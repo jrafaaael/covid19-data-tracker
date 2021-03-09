@@ -1,0 +1,93 @@
+.main-container {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+}
+
+.left-sidevar {
+    padding: 1.5rem;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px var(--shadow-color);
+}
+
+.country-information {
+    margin-bottom: 1.5rem;
+}
+
+.name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#country-name {
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    margin-right: 0.5rem;
+}
+
+#country-flag {
+    min-width: 20px;
+    width: 10vw;
+    max-width: 35px;
+}
+
+.last-update-container {
+    margin: 0.4rem 0 1.5rem 0;
+}
+
+.last-update {
+    font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+    font-weight: 600;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.last-update-information {
+    display: grid;
+    grid-gap: 0.85rem;
+}
+
+.main-container h4 {
+    font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+}
+
+.date-picker-container {
+    margin-bottom: 1.5rem;
+}
+
+.date-picker .chart-container {
+    margin-top: 1.5rem;
+}
+
+#date-picker-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+#date-picker-form label {
+    font-size: clamp(1.15rem, 3vw, 1.5rem);
+    font-weight: 600;
+}
+
+#date-picker-form #date {
+    width: fit-content;
+    padding: 0.25rem;
+    color: var(--primary-font-color);
+    border: 1px solid var(--shadow-color);
+    border-radius: 5px;
+}
+
+#data-per-week {
+    padding: 0;
+    box-shadow: none;
+}
+
+.right-sidevar .chart-container:first-of-type {
+    margin-bottom: 1rem;
+}

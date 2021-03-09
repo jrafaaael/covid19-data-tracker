@@ -1,0 +1,28 @@
+@media all and (min-width: 500px) {
+    .last-update-information {
+        margin: auto;
+        grid-template-columns: repeat(2, auto);
+        place-items: center start;
+    }
+
+    h4:nth-child(even) {
+        place-self: center end;
+        text-align: right;
+    }
+}
+
+@media all and (min-width: 950px) {
+    #country {
+        min-width: 350px;
+    }
+
+    .main-container {
+        grid-template-columns: repeat(2, minmax(440px, 1fr));
+    }
+
+    .chart-container {
+        height: 80vh;
+        max-width: 500px !important;
+        max-height: 250px !important;
+    }
+}
