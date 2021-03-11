@@ -1,6 +1,6 @@
 {
   "name": "covid19-data-tracker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "COVID19 data tracker project",
   "main": "app.js",
   "scripts": {
