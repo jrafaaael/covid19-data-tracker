@@ -21,6 +21,6 @@ body.loading-state {
 }
 
 .loading svg {
-    width: 100% !important;
+    width: 75vw !important;
     max-width: 500px;
 }
