@@ -12,9 +12,14 @@ const COUNTRIES_ACRONYMS_IN_ISO3166_URL = `https://raw.githubusercontent.com/ham
 // Functions
 const listAllCountries = (countriesData) => {
     for (const country in countriesData) {
-        const option = document.createElement('option');
-        option.textContent = option.value = countriesData[country].location;
-        select.appendChild(option);
+        if (countriesData[country].hasOwnProperty('continent') || country === 'OWID_WRL') {
+            const option = document.createElement('option');
+            const optgroup = document.querySelector(`[label="${countriesData[country].continent}"]`) ?? document.createElement('optgroup');
+            optgroup.label = countriesData[country].continent ?? 'World';
+            option.textContent = option.value = countriesData[country].location;
+            optgroup.appendChild(option)
+            select.appendChild(optgroup);
+        }
     }
 }
 
